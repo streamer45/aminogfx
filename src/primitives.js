@@ -50,7 +50,7 @@ function setfilled(val, prop, obj) {
 var setters = [];
 ['x','y','w','h','sx','sy','id',
     'opacity','text','fontSize',
-    'rx','ry','rz','geometry','dimension','cliprect',
+    'rx','ry','rz','geometry','dimension','lineWidth','cliprect',
     'textureLeft','textureRight','textureTop','textureBottom',
     ]
 .forEach(function(name) {
@@ -394,7 +394,8 @@ function Polygon() {
         fill:'#ff0000',
         opacity:1.0,
         dimension:2,
-        geometry:[0,0, 50,0, 0,0]
+        geometry:[0,0, 50,0, 0,0],
+        lineWidth: 1.0
     });
     this.handle = amino.getCore().getNative().createPoly();
     mirrorAmino(this,{
@@ -407,6 +408,7 @@ function Polygon() {
         id:'id',
         filled:'filled',
         geometry:'geometry',
+        lineWidth: 'lineWidth',
         dimension:'dimension',
         opacity:'opacity'
     });

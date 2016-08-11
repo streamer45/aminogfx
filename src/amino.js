@@ -82,4 +82,3 @@ amino.Text = prims.Text;
 amino.Polygon = prims.Polygon;
 amino.ImageView = prims.ImageView;
 amino.Circle = prims.Circle;
-
